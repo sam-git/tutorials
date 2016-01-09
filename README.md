@@ -34,4 +34,7 @@ done
     8. Bugs and Error Handling
     9. Regular Expressions (read 27/12/15, coded 28/12/15)
     10. Modules (read 28/12/15, coded 28/12/15)
-    11. Project: A Programming Language (read 29/12/15)
+    11. Project: A Programming Language (read 29/12/15, coded 1/12/15)
+  - Part 2:
+    12. JavaScript and the Browser (read 3/12/15)
+    13. The Document Object Model (read 4/12/15, coded TBC)
