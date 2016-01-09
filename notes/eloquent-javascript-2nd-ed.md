@@ -143,7 +143,8 @@ The `querySelector` method (without the All part) works in a similar way. This o
 
 ### Positioning and animating
 
-** `position` style property **
+**`position` style property**
+
 * By default it is `static`, meaning the element sits in its normal place in the document.
 *  When it is set to `relative`, the element still takes up space in the document, but now the `top` and `left` style properties can be used to move it relative to its normal place.
 * When position is set to `absolute`, the element is removed from the normal document flow—that is, it no longer takes up space and may overlap with other elements.
