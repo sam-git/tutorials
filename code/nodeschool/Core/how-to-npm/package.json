@@ -1,0 +1,20 @@
+{
+  "name": "@joey/how-to-npm",
+  "version": "1.0.2",
+  "description": "this is a readme file",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {},
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "www.google.com"
+  },
+  "keywords": [
+    "cool"
+  ]
+}
