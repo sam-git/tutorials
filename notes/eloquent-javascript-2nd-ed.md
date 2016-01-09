@@ -7,6 +7,9 @@ Eloquent Javascript Chapter Notes
   9. [Regular Expressions](#chapter-9)
   10. [Modules](#chpater-10)
   11. [Project: A Programming Language](#chapter-11)
+  12. [JavaScript and the Browser](#chapter-12)
+  13. [The Document Object Model](#chapter-13)
+
 
 
 
@@ -51,7 +54,8 @@ eg
 The dot character does not match across new lines.
 Use [^] to match any character *including* new lines. [link](http://eloquentjavascript.net/09_regexp.html#p_6+ZTC2M5ci)
 
-
+### Global Matching
+The `g` modifier is used to perform a global match (find all matches rather than stopping after the first match).
 
 Chapter 10
 ---
@@ -73,3 +77,42 @@ Chapter 11
 
  - regex.test returns a boolean
  - regex.exec does the same as string.match
+
+
+
+ Chapter 12
+ ---
+ JavaScript and the Browser
+
+ TCP:
+ > treats the network as a streamlike device into which you can put bits and have them arrive at the correct destination in the correct order.
+
+ Sandboxing
+ > The attraction of the Web is that you can surf it without necessarily trusting all the pages you visit. This is why browsers severely limit the things a JavaScript program may do: it can’t look at the files on your computer or modify anything not related to the web page it was embedded in.
+ Isolating a programming environment in this way is called sandboxing.
+
+
+
+Chapter 13
+---
+The Document Object Model
+
+The DOM It acts as a live data structure: when it is modified, the page on the screen is updated to reflect the changes.
+
+Each DOM node object has a nodeType property, which contains a numeric code that identifies the type of node. Regular elements have the value 1, which is also defined as the constant property document.ELEMENT_NODE. Text nodes, representing a section of text in the document, have the value 3 (document.TEXT_NODE). Comments have the value 8 (document.COMMENT_NODE).
+
+document.createTextNode(*text*)
+> creates a text node, that can then be inserted into the DOM.
+
+To replace an element with a new one:
+> `e1.parentNode.replaceChild(e2, e1);`
+
+Same pattern to remove an element:
+> `para.parentNode.removeChild(para);`
+
+I really like the elegance of this [sample code](http://eloquentjavascript.net/13_dom.html#c_tE3g5erxbl) for highlighting keywords in programming languages.
+
+### Properties of DOM elements
+
+`offsetWidth` and `offsetHeight`
+> the space the element takes up in pixels.

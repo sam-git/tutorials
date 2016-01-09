@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+  <head>
+    <title>My home page</title>
+    <style>
+      body {background-color:lightgrey;}
+      h1   {color:blue;}
+      p    {color:green;}
+      .box {
+        width: 100px;
+        height: 100px;
+        background-color: purple;
+        border-top: 10px solid black;
+        margin-top: 5px;
+        padding-top: 12px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>My home page</h1>
+    <p>Hello, I am Marijn and this is my home page.</p>
+    <p>I also wrote a book! Read it
+      <a href="http://eloquentjavascript.net">here</a>.
+    </p>
+    <div class="box">
+    </div>
+
+    <script type="text/javascript">
+      var box = document.body.getElementsByClassName('box')[0];
+      console.log('offsetHeight - includes border and padding', box.offsetHeight); // 122
+      console.log('clientHeight - includes padding only - ignores border', box.clientHeight);
+      // neither one includes the margin
+    </script>
+
+  </body>
+</html>
