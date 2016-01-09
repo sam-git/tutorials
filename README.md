@@ -36,5 +36,5 @@ done
     11. Project: A Programming Language (read 29/12/15, coded 1/12/15)
   - Part 2:
     12. JavaScript and the Browser (read 3/12/15)
-    13. The Document Object Model (read 4/12/15)
-      - Coded 13.1 on 9/12/15
+    13. [The Document Object Model](http://eloquentjavascript.net/13_dom.html) (read 4/12/15)
+      - Coded [13.1](http://eloquentjavascript.net/13_dom.html#h_g/5UC3zznV) on 9/12/15
