@@ -1,0 +1,63 @@
+<!doctype html>
+<script src="code/mountains.js"></script>
+<script src="code/chapter/13_dom.js"></script>
+
+<style>
+  /* Defines a cleaner look for tables */
+  table  { border-collapse: collapse; }
+  td, th { border: 1px solid black; padding: 3px 8px; }
+  th     { text-align: left; }
+</style>
+
+<script>
+  function buildTable(data) {
+    // Your code here.
+
+    // Set the keys for the headings
+    var headings = Object.keys(data[0]);
+
+    // Create table
+    var table = document.createElement('table');
+
+    // Create headings
+    var headingRow = document.createElement('tr');
+    table.appendChild(headingRow);
+    headings.forEach(function(colName) {
+      var heading = document.createElement('th');
+
+      // var child = document.createTextNode(colName)
+      // heading.appendChild(child);
+      heading.textContent = colName; // replaces prev 2 lines
+
+      headingRow.appendChild(heading);
+      // console.log(colName)
+    });
+
+   // Create rows
+    data.forEach(function(mountain) {
+      var row = document.createElement('tr');
+      headings.forEach(function(key) {
+        var data = document.createElement('td');
+
+        // var child = document.createTextNode(mountain[key])
+        // data.appendChild(child);
+        data.textContent = mountain[key]; // replaces above 2 lines
+
+        row.appendChild(data);
+
+        //if (key === 'height') {
+        //  data.style.textAlign = "right";
+        //}
+        // replaces above 3 lines
+        if (typeof mountain[key] == "number")
+          data.style.textAlign = "right";
+
+      })
+      table.appendChild(row);
+    })
+
+    return table;
+  }
+
+  document.body.appendChild(buildTable(MOUNTAINS));
+</script>

@@ -101,6 +101,10 @@ The DOM It acts as a live data structure: when it is modified, the page on the s
 
 Each DOM node object has a nodeType property, which contains a numeric code that identifies the type of node. Regular elements have the value 1, which is also defined as the constant property document.ELEMENT_NODE. Text nodes, representing a section of text in the document, have the value 3 (document.TEXT_NODE). Comments have the value 8 (document.COMMENT_NODE).
 
+The node list returned by a method like getElementsByTagName (or a property like childNodes) is live. That is, it is updated as the document changes.
+<br>
+eg `document.body.getElementsByTagName("img");`
+
 document.createTextNode(*text*)
 > creates a text node, that can then be inserted into the DOM.
 
@@ -115,4 +119,34 @@ I really like the elegance of this [sample code](http://eloquentjavascript.net/1
 ### Properties of DOM elements
 
 `offsetWidth` and `offsetHeight`
-> the space the element takes up in pixels.
+> the space the element takes up in pixels. Includes border and padding.
+
+`clientWidth` and `clientHeight`
+> The space inside an element. Only includes padding, ignores border.
+
+Both the above don't include margin.
+
+**Laying out Document Efficienlty**
+
+Laying out a document can be quite a lot of work. In the interest of speed, browser engines do not immediately re-layout a document every time it is changed but rather wait as long as they can.
+
+Set style of an element with `element.style.color = "magenta";`
+or `element.style[font-family] = "arial";`
+
+** Query selectors **
+
+The `querySelectorAll` method, which is defined both on the document object and on element nodes, takes a selector string and returns an array-like object containing all the elements that it matches.
+
+Unlike methods such as `getElementsByTagName`, the object returned by `querySelectorAll` is not live. It won’t change when you change the document.
+
+The `querySelector` method (without the All part) works in a similar way. This one is useful if you want a specific, single element. It will return only the first matching element or null if no elements match.
+
+### Positioning and animating
+
+** `position` style property
+* By default it is `static`, meaning the element sits in its normal place in the document.
+*  When it is set to `relative`, the element still takes up space in the document, but now the `top` and `left` style properties can be used to move it relative to its normal place.
+* When position is set to `absolute`, the element is removed from the normal document flow—that is, it no longer takes up space and may overlap with other elements.
+  * Also, its `top` and `left` properties can be used to absolutely position it relative to the top-left corner of the nearest enclosing element whose position property isn’t `static`, or relative to the document if no such enclosing element exists.
+
+  
