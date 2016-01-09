@@ -19,7 +19,6 @@ todo
 
 done
 ---
-### December 2015
 - [Angular 2 for TypeScript 5 Min Quickstart](https://angular.io/docs/ts/latest/quickstart.html) completed on 22/12/15
 - [Angular 2 for TypeScript Tutorial](https://angular.io/docs/ts/latest/quickstart.html) completed on 22/12/15
 - [Eloquent Javascript](http://eloquentjavascript.net/)
