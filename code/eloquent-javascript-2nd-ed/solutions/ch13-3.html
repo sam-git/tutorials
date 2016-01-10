@@ -1,0 +1,29 @@
+<!doctype html>
+<script src="code/mountains.js"></script>
+<script src="code/chapter/13_dom.js"></script>
+
+<img src="img/cat.png" id="cat" style="position: absolute">
+<img src="img/hat.png" id="hat" style="position: absolute">
+
+<script>
+  var cat = document.querySelector("#cat");
+  var hat = document.querySelector("#hat");
+  // Your code here.
+  var angle = 0, lastTime = null;
+  function animate(time) {
+    if (lastTime != null)
+      angle += (time - lastTime) * 0.001;
+    lastTime = time;
+    cat.style.top = 20 + (Math.sin(angle) * 20) + "px";
+    cat.style.left = 200 + (Math.cos(angle) * 50) + "px";
+
+    hat.style.top = cat.getBoundingClientRect().top + (Math.sin(angle * 5) * 30) + "px";
+    hat.style.left = cat.getBoundingClientRect().left + (Math.cos(angle * 5) * 30)  + "px";
+
+
+    requestAnimationFrame(animate);
+  }
+  requestAnimationFrame(animate);
+  console.log(cat.getBoundingClientRect());
+
+</script>

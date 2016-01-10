@@ -9,6 +9,7 @@ Eloquent Javascript Chapter Notes
   11. [Project: A Programming Language](#chapter-11)
   12. [JavaScript and the Browser](#chapter-12)
   13. [The Document Object Model](#chapter-13)
+  14. [Handling Events](#chapter-14)
 
 
 
@@ -150,4 +151,7 @@ The `querySelector` method (without the All part) works in a similar way. This o
 * When position is set to `absolute`, the element is removed from the normal document flow—that is, it no longer takes up space and may overlap with other elements.
   * Also, its `top` and `left` properties can be used to absolutely position it relative to the top-left corner of the nearest enclosing element whose position property isn’t `static`, or relative to the document if no such enclosing element exists.
 
-  
+
+Chapter 14
+---
+[Handling Events](http://eloquentjavascript.net/14_event.html)
