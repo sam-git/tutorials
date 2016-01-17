@@ -155,3 +155,7 @@ The `querySelector` method (without the All part) works in a similar way. This o
 Chapter 14
 ---
 [Handling Events](http://eloquentjavascript.net/14_event.html)
+
+### Mouse Motion
+
+* Unfortunately, not all browsers give "mousemove" events a meaningful `which` property. There is a standard property called `buttons`, which provides similar information, but that is also not supported on all browsers. Fortunately, all major browsers support either `buttons` or `which`, so the `buttonPressed` function in the example first tries `buttons`, and falls back to `which` when that isn’t available.

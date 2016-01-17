@@ -37,6 +37,6 @@ done
   - Part 2:
     12. JavaScript and the Browser (read 3/12/15)
     13. [The Document Object Model](http://eloquentjavascript.net/13_dom.html) (read 4/12/15)
-      - Coded [13.1](http://eloquentjavascript.net/13_dom.html#h_g/5UC3zznV) on 9/12/15
+      - Coded [13.1](http://eloquentjavascript.net/13_dom.html#h_g/5UC3zznV) on 9/12/16
       - Coded 13.2, 13.3 on 10/1/2016
-    14. [Handling Events]
+    14. [Handling Events](http://eloquentjavascript.net/14_event.html) (read 10/1/16)
