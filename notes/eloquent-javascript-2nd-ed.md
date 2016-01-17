@@ -156,6 +156,18 @@ Chapter 14
 ---
 [Handling Events](http://eloquentjavascript.net/14_event.html)
 
+<<<<<<< HEAD
 ### Mouse Motion
 
 * Unfortunately, not all browsers give "mousemove" events a meaningful `which` property. There is a standard property called `buttons`, which provides similar information, but that is also not supported on all browsers. Fortunately, all major browsers support either `buttons` or `which`, so the `buttonPressed` function in the example first tries `buttons`, and falls back to `which` when that isn’t available.
+=======
+* In the browser the global scope is equivalent to the window object.
+* Every DOM element has its own `addEventListener` method, which allows you to listen specifically on that element.
+* Giving a node an `onclick` attribute has a similar effect. But a node has only one `onclick` attribute, so you can register only one handler per node that way.
+
+### Key Events
+The DOM node where a key event originates depends on the element that has focus when the key is pressed. Normal nodes cannot have focus (unless you give them a tabindex attribute), but things such as links, buttons, and form fields can. We’ll come back to form fields in Chapter 18. When nothing in particular has focus, document.body acts as the target node of key events.
+
+### Mouse Motion
+I should add that a hover effect like this can be much more easily achieved using the CSS pseudoselector :hover, as the next example shows. But when your hover effect involves doing something more complicated than changing a style on the target node, you must use the trick with "mouseover" and "mouseout" events.
+>>>>>>> 6ba659235d095cbfe7613cfaa428e3d5f65dd036
