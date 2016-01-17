@@ -75,15 +75,14 @@ Chapter 11
 [Solving problem 3 - Comments](http://eloquentjavascript.net/11_language.html#h_/OBuIOX390)
 - string.search returns the first index of match.
 - string.match returns an array that includes the groups.
-
- - regex.test returns a boolean
- - regex.exec does the same as string.match
-
+- regex.test returns a boolean
+- regex.exec does the same as string.match
 
 
- Chapter 12
- ---
- JavaScript and the Browser
+
+Chapter 12
+---
+JavaScript and the Browser
 
  TCP:
  > treats the network as a streamlike device into which you can put bits and have them arrive at the correct destination in the correct order.
@@ -156,11 +155,12 @@ Chapter 14
 ---
 [Handling Events](http://eloquentjavascript.net/14_event.html)
 
-<<<<<<< HEAD
 ### Mouse Motion
 
 * Unfortunately, not all browsers give "mousemove" events a meaningful `which` property. There is a standard property called `buttons`, which provides similar information, but that is also not supported on all browsers. Fortunately, all major browsers support either `buttons` or `which`, so the `buttonPressed` function in the example first tries `buttons`, and falls back to `which` when that isn’t available.
-=======
+
+---
+
 * In the browser the global scope is equivalent to the window object.
 * Every DOM element has its own `addEventListener` method, which allows you to listen specifically on that element.
 * Giving a node an `onclick` attribute has a similar effect. But a node has only one `onclick` attribute, so you can register only one handler per node that way.
@@ -170,4 +170,3 @@ The DOM node where a key event originates depends on the element that has focus 
 
 ### Mouse Motion
 I should add that a hover effect like this can be much more easily achieved using the CSS pseudoselector :hover, as the next example shows. But when your hover effect involves doing something more complicated than changing a style on the target node, you must use the trick with "mouseover" and "mouseout" events.
->>>>>>> 6ba659235d095cbfe7613cfaa428e3d5f65dd036
